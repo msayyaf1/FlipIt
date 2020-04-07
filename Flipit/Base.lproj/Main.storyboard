@@ -40,12 +40,19 @@
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cqk-OV-tFq">
                                                     <rect key="frame" x="0.0" y="0.0" width="158" height="224"/>
                                                 </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZSr-Qh-Hv7">
+                                                    <rect key="frame" x="0.0" y="0.0" width="158" height="224"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="ZSr-Qh-Hv7" firstAttribute="leading" secondItem="4KS-xa-7HV" secondAttribute="leading" id="7Zo-FI-Fuf"/>
+                                                <constraint firstAttribute="trailing" secondItem="ZSr-Qh-Hv7" secondAttribute="trailing" id="7e3-82-b4Z"/>
+                                                <constraint firstAttribute="bottom" secondItem="ZSr-Qh-Hv7" secondAttribute="bottom" id="9EX-uh-cEB"/>
                                                 <constraint firstAttribute="trailing" secondItem="cqk-OV-tFq" secondAttribute="trailing" id="F74-eg-4jG"/>
                                                 <constraint firstAttribute="bottom" secondItem="cqk-OV-tFq" secondAttribute="bottom" id="GlF-i5-SYP"/>
                                                 <constraint firstItem="cqk-OV-tFq" firstAttribute="top" secondItem="4KS-xa-7HV" secondAttribute="top" id="Qjt-2N-t4i"/>
                                                 <constraint firstItem="cqk-OV-tFq" firstAttribute="leading" secondItem="4KS-xa-7HV" secondAttribute="leading" id="d4I-Qu-lkl"/>
+                                                <constraint firstItem="ZSr-Qh-Hv7" firstAttribute="top" secondItem="4KS-xa-7HV" secondAttribute="top" id="mGP-R8-d65"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                     </collectionViewCell>
