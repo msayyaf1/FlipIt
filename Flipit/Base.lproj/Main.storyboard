@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Pjn-dd-s2H">
-                                <rect key="frame" x="44" y="0.0" width="808" height="393"/>
+                                <rect key="frame" x="44" y="10" width="808" height="383"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RiF-Wc-AxD">
                                     <size key="itemSize" width="158" height="224"/>
@@ -61,7 +61,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Pjn-dd-s2H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4tJ-ul-95L"/>
+                            <constraint firstItem="Pjn-dd-s2H" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="4tJ-ul-95L"/>
                             <constraint firstAttribute="bottom" secondItem="kS2-91-bjp" secondAttribute="bottom" id="69L-5A-enc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Pjn-dd-s2H" secondAttribute="trailing" id="MCp-jc-UhP"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Pjn-dd-s2H" secondAttribute="bottom" id="SpS-Hx-kS8"/>
