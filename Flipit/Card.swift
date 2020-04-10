@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Card{ //Class containing
+class Card{ //Class depicting each card
     var imageName = ""
     var isFlipped = false
     var isMatched = false
