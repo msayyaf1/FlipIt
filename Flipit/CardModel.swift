@@ -19,7 +19,7 @@ class CardModel { // model class for cards
         for _ in 1...8 {
             // Generating random numbers
             let randomNumber = arc4random_uniform(13) + 1
-            
+            print(randomNumber)
             // Create the first card object
             let cardOne = Card()  // initializing a card object
             cardOne.imageName = "card\(randomNumber)"
