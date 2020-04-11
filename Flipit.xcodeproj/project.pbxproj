@@ -13,6 +13,7 @@
 		820508A9243C8FD200251863 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 820508A7243C8FD200251863 /* Main.storyboard */; };
 		820508AB243C8FD300251863 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 820508AA243C8FD300251863 /* Assets.xcassets */; };
 		820508AE243C8FD300251863 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 820508AC243C8FD300251863 /* LaunchScreen.storyboard */; };
+		8218B01C2441B94B007E794D /* CardCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8218B01B2441B94B007E794D /* CardCollectionViewCell.swift */; };
 		827660CE24408FB300476907 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827660CD24408FB300476907 /* CardModel.swift */; };
 		827660D02440920900476907 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827660CF2440920900476907 /* Card.swift */; };
 /* End PBXBuildFile section */
@@ -26,6 +27,7 @@
 		820508AA243C8FD300251863 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		820508AD243C8FD300251863 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		820508AF243C8FD300251863 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8218B01B2441B94B007E794D /* CardCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCollectionViewCell.swift; sourceTree = "<group>"; };
 		827660CD24408FB300476907 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		827660CF2440920900476907 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,6 +67,7 @@
 				820508A5243C8FD200251863 /* ViewController.swift */,
 				827660CD24408FB300476907 /* CardModel.swift */,
 				827660CF2440920900476907 /* Card.swift */,
+				8218B01B2441B94B007E794D /* CardCollectionViewCell.swift */,
 				820508A7243C8FD200251863 /* Main.storyboard */,
 				820508AA243C8FD300251863 /* Assets.xcassets */,
 				820508AC243C8FD300251863 /* LaunchScreen.storyboard */,
@@ -148,6 +151,7 @@
 				827660CE24408FB300476907 /* CardModel.swift in Sources */,
 				827660D02440920900476907 /* Card.swift in Sources */,
 				820508A2243C8FD200251863 /* AppDelegate.swift in Sources */,
+				8218B01C2441B94B007E794D /* CardCollectionViewCell.swift in Sources */,
 				820508A4243C8FD200251863 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
