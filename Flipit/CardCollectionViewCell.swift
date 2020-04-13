@@ -17,4 +17,29 @@ class CardCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var backImageView: UIImageView!
     
+    // to keep track of which card is this cell is displaying
+    var card:Card?
+    
+    // it passes a card into this method
+    func setCard(_ card:Card){ // _ is for not specifying the label
+        //the card that gets passed into this cell is the one that we want this cell to diplay and represent
+        
+        // keep track of the parameter that passed in to the card property of the cardcollectionview cell , rhs
+        self.card = card
+        
+        frontImageView.image = UIImage(named: card.imageName)
+            
+    }
+    
+    
+    //flipping the backimage to front
+    func flip(){
+        
+    }
+    
+    func flipBack(){
+        
+        
+    }
+    
 }

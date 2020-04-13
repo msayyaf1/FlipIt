@@ -51,7 +51,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     // next is protocol method for uicollectoinviewdelegate to capture user interaction with the cards
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        print("Cell is tapped\(indexPath.row)")
     }
     
     
