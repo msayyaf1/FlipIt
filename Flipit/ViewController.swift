@@ -42,9 +42,17 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         // returns a uicollectionview object
         //indexpath defines which cell the collection view is asking for
-        
+        // GETTING A CARDCOLLECTIONVEIWCELL OBJECT
         //the method below tries to get a cell to resuse, maybe a one that is scrolled out of view
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CardCell", for: indexPath) as! CardCollectionViewCell //castind as cardcollectionviewcell
+        
+        // Get the card collectionview trying to display
+        
+        let card = cardArray[indexPath.row] //indexpath, tells us which cell the collectionview is asking to display, row property indicates which item its diplaying
+        
+    
+        // set that card for the cells
+        cell.setCard(card)
         
         return cell
     }
