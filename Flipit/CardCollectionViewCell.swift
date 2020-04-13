@@ -28,6 +28,16 @@ class CardCollectionViewCell: UICollectionViewCell {
         self.card = card
         
         frontImageView.image = UIImage(named: card.imageName)
+        
+        //determine if the card is in flippeddown or flippedup state
+        if card.isFlipped == true  {
+            //make frontimageview is on top
+            UIView.transition(from: backImageView, to: frontImageView, duration: 0, options: [.transitionFlipFromRight, .showHideTransitionViews], completion: nil)
+        }
+        else{
+            //make backimageview is ontop
+            UIView.transition(from: frontImageView, to: backImageView, duration: 0, options: [.transitionFlipFromLeft, .showHideTransitionViews], completion: nil)
+        }
             
     }
     
@@ -35,10 +45,17 @@ class CardCollectionViewCell: UICollectionViewCell {
     //flipping the backimage to front
     func flip(){
         
+        // flipping animation transition method of uiview class
+        UIView.transition(from: backImageView, to: frontImageView, duration: 0.3, options: [.transitionFlipFromLeft, .showHideTransitionViews], completion: nil)
+        
+        
+        
+        
     }
     
     func flipBack(){
         
+        UIView.transition(from: frontImageView, to: backImageView, duration: 0.3, options: [.transitionFlipFromRight, .showHideTransitionViews], completion: nil)
         
     }
     

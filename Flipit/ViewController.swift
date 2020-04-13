@@ -60,6 +60,32 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     // next is protocol method for uicollectoinviewdelegate to capture user interaction with the cards
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("Cell is tapped\(indexPath.row)")
+        
+        //get to the cell that just got selected
+        let cell = collectionView.cellForItem(at: indexPath) as! CardCollectionViewCell
+        
+        //get the card user selected
+        let card = cardArray[indexPath.row]
+        
+        
+        if card.isFlipped == true{
+            cell.flipBack()
+            
+            // setting flag back
+            card.isFlipped = false
+        }
+        else {
+            //flip the cell
+            cell.flip()
+            
+            //setting the flag
+            card.isFlipped = true
+            
+        }
+        
+        
+        
+        
     }
     
     
