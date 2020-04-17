@@ -91,22 +91,73 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 
                 // TO DO: Perform matching logic
             }
-            
-      
+        
         }
         
+    } // Ending of didselectitemat method
+    
+    //MARK: - GAME LOGIC METHODS
+    
+    func checkForMatches(_ secondFlippedCardIndex:IndexPath){
+        
+        // Get the cells for the two revealed cards
+        
+        let cardOneCell = collectionView.cellForItem(at: firstFlippedCardIndex!) as? CardCollectionViewCell
+        //keeping it a optional incase if its nil ^^
         
         
+        let cardTwoCell = collectionView.cellForItem(at: secondFlippedCardIndex) as? CardCollectionViewCell
         
+        
+        // Get the revealed cards
+        
+        let cardOne = cardArray[firstFlippedCardIndex!.row]
+        let cardTwo = cardArray[secondFlippedCardIndex.row]
+        // row property of indexpath contains the actual index of the cell
+        
+        // Compare the two cards
+        
+        if cardOne.imageName == cardTwo.imageName{
+            
+            // It's a match
+            // Set the statuses of card
+            
+            cardOne.isMatched = true
+            cardTwo.isMatched = true
+            
+            // Remove cards
+            cardOneCell?.remove() //optionalchaining
+            cardTwoCell?.remove()
+            
+        }
+        else {
+            // It's not a match
+            
+            // Set the statues
+            
+            cardOne.isMatched = false
+            cardTwo.isMatched = false
+            
+            // flip back the cards
+            cardOneCell?.flipBack()
+            cardTwoCell?.flipBack()
+             
+        }
+        
+        firstFlippedCardIndex = nil //resetting the index to be able to repeat the process
     }
     
     
 
 
-}
+} //Ending of viewcontroller class
 
 //  MARK: - SO HOW IT WORKS
 
 // in the CardModel get cards method we randomly generated 8 pairs of cards,
 // go to the view controller, the collection view asks for the no of items, we return cardarray.count,   therefore the cellforitem at protocol method will be called 16 times
+
+
+// in cardone cell constant we are assiging, we are trying to get the cell for this indexpath from indexview and then casting it to cardcollectionview cell so we use optional chaining
+
 
