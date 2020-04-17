@@ -88,8 +88,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             else {
                 
                 // This is the second card
+                //matching logic
                 
-                // TO DO: Perform matching logic
+                checkForMatches(indexPath)
             }
         
         }
@@ -135,8 +136,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             
             // Set the statues
             
-            cardOne.isMatched = false
-            cardTwo.isMatched = false
+            cardOne.isFlipped = false
+            cardTwo.isFlipped = false
             
             // flip back the cards
             cardOneCell?.flipBack()

@@ -54,9 +54,14 @@ class CardCollectionViewCell: UICollectionViewCell {
     }
     
     func flipBack(){
+    
+        // for delaying the transition
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.6) {
+            UIView.transition(from: self.frontImageView, to: self.backImageView, duration: 0.3, options: [.transitionFlipFromRight, .showHideTransitionViews], completion: nil)
         
-        UIView.transition(from: frontImageView, to: backImageView, duration: 0.3, options: [.transitionFlipFromRight, .showHideTransitionViews], completion: nil)
+        }
         
+  
     }
     
     func remove(){
