@@ -13,6 +13,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     var model = CardModel() // creating a new object of the cardmodel class
     var cardArray = [Card]()
     
+    var firstFlippedCardIndex:IndexPath? // to keep track of first flipped card, its optional, nil means first card
+    
+    
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -68,19 +71,28 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let card = cardArray[indexPath.row]
         
         
-        if card.isFlipped == true{
-            cell.flipBack()
+        if card.isFlipped == false{
             
-            // setting flag back
-            card.isFlipped = false
-        }
-        else {
             //flip the cell
             cell.flip()
-            
+                       
             //setting the flag
             card.isFlipped = true
             
+            //Determine if its first card of second card that's flipped over
+            if firstFlippedCardIndex == nil {
+                
+                // This is the first card
+                firstFlippedCardIndex = indexPath
+            }
+            else {
+                
+                // This is the second card
+                
+                // TO DO: Perform matching logic
+            }
+            
+      
         }
         
         
