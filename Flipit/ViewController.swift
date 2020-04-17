@@ -62,7 +62,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     // next is protocol method for uicollectoinviewdelegate to capture user interaction with the cards
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("Cell is tapped\(indexPath.row)")
+        
+        //print("Cell is tapped\(indexPath.row)")
         
         //get to the cell that just got selected
         let cell = collectionView.cellForItem(at: indexPath) as! CardCollectionViewCell
@@ -71,7 +72,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         let card = cardArray[indexPath.row]
         
         
-        if card.isFlipped == false{
+        if card.isFlipped == false && card.isMatched == false{
             
             //flip the cell
             cell.flip()
@@ -145,6 +146,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
              
         }
         
+        // Tell the collectionview to reload the cell of the first card if it is nil
+        if cardOneCell == nil{
+            collectionView.reloadItems(at: [firstFlippedCardIndex!])
+            
+        }
+        // Reset the property that tracks the first card flipped
         firstFlippedCardIndex = nil //resetting the index to be able to repeat the process
     }
     

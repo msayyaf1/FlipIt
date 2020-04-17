@@ -27,6 +27,19 @@ class CardCollectionViewCell: UICollectionViewCell {
         // keep track of the parameter that passed in to the card property of the cardcollectionview cell , rhs
         self.card = card
         
+        //Check if card is already matched
+        if card.isMatched == true {
+            // if card is matched make imageviews invisible
+            backImageView.alpha = 0
+            frontImageView.alpha = 0
+            
+            return //rest of the code doesnt get executed
+        }
+        else {
+            backImageView.alpha = 1
+            frontImageView.alpha = 1
+        }
+        
         frontImageView.image = UIImage(named: card.imageName)
         
         //determine if the card is in flippeddown or flippedup state
