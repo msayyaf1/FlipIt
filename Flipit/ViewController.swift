@@ -39,6 +39,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         timer = Timer.scheduledTimer(timeInterval: 0.001 , target: self, selector: #selector(timerElapsed), userInfo: nil, repeats: true)
         //will call the timerelapsed every millisecond
         
+        // when user scrolls it stops because it is in another run loop so..
+        RunLoop.main.add(timer!, forMode: .common)
+        
         
     }
     
@@ -57,9 +60,15 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         // When timer has reached zero
         if milliseconds <= 0{
             timer?.invalidate() //stops the timer
+            timerLabel.textColor = UIColor.red
+            
+            //Check if any cards unmatched
+            checkGameEnded()
+            
         }
 
     }
+    
     
     // MARK: - UICollectionView protocol methods
     
@@ -93,6 +102,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     // next is protocol method for uicollectoinviewdelegate to capture user interaction with the cards
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        //Check if there is any time left
+        if milliseconds <= 0 {
+            return
+        }
         
         //print("Cell is tapped\(indexPath.row)")
         
@@ -162,6 +176,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             cardOneCell?.remove() //optionalchaining
             cardTwoCell?.remove()
             
+            //Check if there are any unmatched cards
+            checkGameEnded()
+            
         }
         else {
             // It's not a match
@@ -174,6 +191,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             // flip back the cards
             cardOneCell?.flipBack()
             cardTwoCell?.flipBack()
+            
              
         }
         
@@ -184,6 +202,66 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
         // Reset the property that tracks the first card flipped
         firstFlippedCardIndex = nil //resetting the index to be able to repeat the process
+    }
+    
+    func checkGameEnded(){
+        
+        //Determine if there are any cards unmatched
+         var isWon = true
+        
+        for card in cardArray {
+            
+            if card.isMatched == false{
+                isWon = false
+                break
+            }
+        }
+        
+        //Messaging variables
+        var title = ""
+        var message = ""
+        
+        
+        // if no cards left then user won
+        if isWon == true{
+            if milliseconds > 0{
+                timer?.invalidate()
+
+            }
+            title = "Congratulations!"
+            message = "You've won"
+            
+        }
+        else {
+            //if therea re unmatched cards, check any time left
+
+            if milliseconds > 0 {
+                return
+                
+            }
+           title = "Game Over!"
+           message = "You've Lost!"
+            
+        }
+        // show won/lost alerts
+        showAlert(title, message)
+        
+
+    }
+    
+    func showAlert(_ title:String, _ message:String){
+        
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        // adding button to alert
+        let alertAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        
+        //Adding the action to alert
+        alert.addAction(alertAction)
+        
+        // for presenting the alertcontroller
+        present(alert, animated: true, completion: nil)
+        
     }
     
     
