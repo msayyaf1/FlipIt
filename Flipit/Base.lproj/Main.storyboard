@@ -19,13 +19,14 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="kS2-91-bjp">
                                 <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="jZm-YD-D8E">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jZm-YD-D8E">
                                 <rect key="frame" x="44" y="0.0" width="808" height="393"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Remaining: 10" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07p-XB-i34">
-                                        <rect key="frame" x="0.0" y="0.0" width="808" height="27"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time Remaining: 10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07p-XB-i34">
+                                        <rect key="frame" x="309" y="0.0" width="190" height="27"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="27" id="Q9l-3I-3hv"/>
+                                            <constraint firstAttribute="width" constant="190" id="eDa-Ex-mgW"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -33,6 +34,7 @@
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Pjn-dd-s2H">
                                         <rect key="frame" x="0.0" y="27" width="808" height="366"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="RiF-Wc-AxD">
                                             <size key="itemSize" width="158" height="224"/>
                                             <size key="estimatedItemSize" width="158" height="224"/>
@@ -74,6 +76,10 @@
                                         </cells>
                                     </collectionView>
                                 </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Pjn-dd-s2H" firstAttribute="width" secondItem="jZm-YD-D8E" secondAttribute="width" id="lEo-f1-6QK"/>
+                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>

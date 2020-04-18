@@ -15,9 +15,13 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     var firstFlippedCardIndex:IndexPath? // to keep track of first flipped card, its optional, nil means first card
     
-    
+    @IBOutlet weak var timerLabel: UILabel!
     
     @IBOutlet weak var collectionView: UICollectionView!
+    
+    var timer:Timer? // property to hold reference to timer
+    
+    var milliseconds: Float = 10 * 1000 //10 seconds
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +32,33 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         //setting the view controller as the delegate (dispatcher) for both protocols
         collectionView.delegate = self
         collectionView.dataSource = self
+        
+        // Create Timer
+        
+        // calling this initialization method is going to return a timer object, set to the parameters
+        timer = Timer.scheduledTimer(timeInterval: 0.001 , target: self, selector: #selector(timerElapsed), userInfo: nil, repeats: true)
+        //will call the timerelapsed every millisecond
+        
+        
+    }
+    
+    //MARK: - Timer Methods
+    
+    @objc func timerElapsed(){
+        //runs when timer has fired
+        
+        milliseconds -= 1
+        
+        //converting to seconds
+        let seconds = String(format: "%.2f", milliseconds/1000) // 2 decimel places
+        
+        timerLabel.text = "Time Remaining: \(seconds)"
+        
+        // When timer has reached zero
+        if milliseconds <= 0{
+            timer?.invalidate() //stops the timer
+        }
+
     }
     
     // MARK: - UICollectionView protocol methods
