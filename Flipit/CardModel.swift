@@ -12,7 +12,7 @@ class CardModel { // model class for cards
     
     func getCards() -> [Card] {
         
-        // Declare array to store number generated
+        // Declare array to store number generated its an array
         var generatedNumberArray = [Int]()
         
         //Declare an array to store generated cards
@@ -47,16 +47,20 @@ class CardModel { // model class for cards
                 // Implement unique pair of cards
         }
             
-
-            
-            
-            
-            
-            
-            
-            
         }
-        // TODO: Randomize the array
+        // Randomize the array ie the cards
+        
+        for i in 0...generatedCardsArray.count-1 {
+            
+            // find a random index to swap with
+            let randomNumber = Int(arc4random_uniform(UInt32(generatedCardsArray.count)))
+            
+            //swap the two cards
+            let temporaryStorage = generatedCardsArray[i]
+            generatedCardsArray[i] = generatedCardsArray[randomNumber]
+            generatedCardsArray[randomNumber] = temporaryStorage
+        }
+        
         
         //return the array
         return generatedCardsArray
