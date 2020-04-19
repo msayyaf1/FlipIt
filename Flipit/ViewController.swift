@@ -21,7 +21,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     
     var timer:Timer? // property to hold reference to timer
     
-    var milliseconds: Float = 10 * 1000 //10 seconds
+    var milliseconds: Float = 25 * 1000 //10 seconds
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +43,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         RunLoop.main.add(timer!, forMode: .common)
         
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        SoundManager.playSound(.shuffle)
     }
     
     //MARK: - Timer Methods
@@ -121,6 +125,10 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             
             //flip the cell
             cell.flip()
+            
+            
+            //play sound
+            SoundManager.playSound(.flip)
                        
             //setting the flag
             card.isFlipped = true
@@ -167,6 +175,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         if cardOne.imageName == cardTwo.imageName{
             
             // It's a match
+            
+            //play sound
+            SoundManager.playSound(.match)
+            
+            
             // Set the statuses of card
             
             cardOne.isMatched = true
@@ -182,6 +195,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
         else {
             // It's not a match
+            
+            //play sound
+            SoundManager.playSound(.nomatch)
             
             // Set the statues
             
