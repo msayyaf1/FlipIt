@@ -83,11 +83,11 @@
 				827660CD24408FB300476907 /* CardModel.swift */,
 				827660CF2440920900476907 /* Card.swift */,
 				8218B01B2441B94B007E794D /* CardCollectionViewCell.swift */,
+				823705A0244C4FA600AD7229 /* SoundManager.swift */,
 				820508A7243C8FD200251863 /* Main.storyboard */,
 				820508AA243C8FD300251863 /* Assets.xcassets */,
 				820508AC243C8FD300251863 /* LaunchScreen.storyboard */,
 				820508AF243C8FD300251863 /* Info.plist */,
-				823705A0244C4FA600AD7229 /* SoundManager.swift */,
 			);
 			path = Flipit;
 			sourceTree = "<group>";
