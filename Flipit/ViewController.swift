@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+
+    //UICollectionViewDataSource and UICollectionViewDelegate are the protocols and delegates taken from UIView class
     
     var model = CardModel() // creating a new object of the cardmodel class
     var cardArray = [Card]()

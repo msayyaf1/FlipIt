@@ -9,6 +9,7 @@
 import Foundation
 import AVFoundation
 
+// class for interacting and impplementing sounds
 class SoundManager{
     
     static var audioPlayer: AVAudioPlayer? //class inside the avfoundation framework
