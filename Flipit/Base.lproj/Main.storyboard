@@ -9,6 +9,32 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
+        <scene sceneID="qu2-Xo-jBs">
+            <objects>
+                <viewController id="q5B-CM-Eq7" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mxc-u6-QV2">
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="qoV-fq-nQh">
+                                <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="qoV-fq-nQh" secondAttribute="bottom" id="0kY-nU-zu9"/>
+                            <constraint firstItem="qoV-fq-nQh" firstAttribute="leading" secondItem="Mxc-u6-QV2" secondAttribute="leading" id="1Rl-us-Sud"/>
+                            <constraint firstItem="qoV-fq-nQh" firstAttribute="top" secondItem="Mxc-u6-QV2" secondAttribute="top" id="OIC-vR-CaK"/>
+                            <constraint firstAttribute="trailing" secondItem="qoV-fq-nQh" secondAttribute="trailing" id="x1m-am-qGJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="rIq-Yo-SvT"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hoH-bI-NAD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-582" y="114"/>
+        </scene>
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Flipit" customModuleProvider="target" sceneMemberID="viewController">
