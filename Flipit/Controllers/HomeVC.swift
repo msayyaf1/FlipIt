@@ -9,8 +9,6 @@
 import UIKit
 
 class HomeVC: UIViewController {
-
-    @IBOutlet weak var playBtn: NSLayoutConstraint!
     
     override func viewDidLoad() {
         super.viewDidLoad()

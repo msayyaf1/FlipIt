@@ -54,9 +54,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="rIq-Yo-SvT"/>
                     </view>
-                    <connections>
-                        <outlet property="playBtn" destination="1lX-aF-d2h" id="HDa-f2-9Hc"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hoH-bI-NAD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
