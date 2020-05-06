@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class MainVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     //UICollectionViewDataSource and UICollectionViewDelegate are the protocols and delegates taken from UIView class
     

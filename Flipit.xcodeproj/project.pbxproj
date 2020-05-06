@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		820508A2243C8FD200251863 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820508A1243C8FD200251863 /* AppDelegate.swift */; };
 		820508A4243C8FD200251863 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820508A3243C8FD200251863 /* SceneDelegate.swift */; };
-		820508A6243C8FD200251863 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820508A5243C8FD200251863 /* ViewController.swift */; };
+		820508A6243C8FD200251863 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820508A5243C8FD200251863 /* MainVC.swift */; };
 		820508A9243C8FD200251863 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 820508A7243C8FD200251863 /* Main.storyboard */; };
 		820508AB243C8FD300251863 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 820508AA243C8FD300251863 /* Assets.xcassets */; };
 		820508AE243C8FD300251863 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 820508AC243C8FD300251863 /* LaunchScreen.storyboard */; };
@@ -22,13 +22,14 @@
 		823705A1244C4FA600AD7229 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823705A0244C4FA600AD7229 /* SoundManager.swift */; };
 		827660CE24408FB300476907 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827660CD24408FB300476907 /* CardModel.swift */; };
 		827660D02440920900476907 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 827660CF2440920900476907 /* Card.swift */; };
+		829209B62462CCA3004AF0DF /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 829209B52462CCA3004AF0DF /* HomeVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8205089E243C8FD200251863 /* Flipit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Flipit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		820508A1243C8FD200251863 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		820508A3243C8FD200251863 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		820508A5243C8FD200251863 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		820508A5243C8FD200251863 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		820508A8243C8FD200251863 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		820508AA243C8FD300251863 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		820508AD243C8FD300251863 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -42,6 +43,7 @@
 		823705A0244C4FA600AD7229 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
 		827660CD24408FB300476907 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		827660CF2440920900476907 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		829209B52462CCA3004AF0DF /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,10 +78,10 @@
 		820508A0243C8FD200251863 /* Flipit */ = {
 			isa = PBXGroup;
 			children = (
+				829209B42462CC42004AF0DF /* Controllers */,
 				82370594244C378200AD7229 /* Sounds */,
 				820508A1243C8FD200251863 /* AppDelegate.swift */,
 				820508A3243C8FD200251863 /* SceneDelegate.swift */,
-				820508A5243C8FD200251863 /* ViewController.swift */,
 				827660CD24408FB300476907 /* CardModel.swift */,
 				827660CF2440920900476907 /* Card.swift */,
 				8218B01B2441B94B007E794D /* CardCollectionViewCell.swift */,
@@ -109,6 +111,15 @@
 				8237059E244C37C800AD7229 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		829209B42462CC42004AF0DF /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				820508A5243C8FD200251863 /* MainVC.swift */,
+				829209B52462CCA3004AF0DF /* HomeVC.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,7 +197,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				820508A6243C8FD200251863 /* ViewController.swift in Sources */,
+				820508A6243C8FD200251863 /* MainVC.swift in Sources */,
+				829209B62462CCA3004AF0DF /* HomeVC.swift in Sources */,
 				827660CE24408FB300476907 /* CardModel.swift in Sources */,
 				827660D02440920900476907 /* Card.swift in Sources */,
 				820508A2243C8FD200251863 /* AppDelegate.swift in Sources */,
