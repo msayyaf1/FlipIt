@@ -23,7 +23,7 @@ class MainVC: UIViewController, UICollectionViewDataSource, UICollectionViewDele
     
     var timer:Timer? // property to hold reference to timer
     
-    var milliseconds: Float = 25 * 1000 //10 seconds
+    var milliseconds: Float = 40 * 1000 //40 seconds
     
     override func viewDidLoad() {
         super.viewDidLoad()
